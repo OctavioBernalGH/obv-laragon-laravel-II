@@ -36,3 +36,28 @@ Insertaremos datos en la BBDD de forma manual para comenzar a tratarlos en la ap
 
 ![image](https://user-images.githubusercontent.com/103035621/193814038-3c096c1a-5b70-4b86-b405-c241185789dd.png)
 ![image](https://user-images.githubusercontent.com/103035621/193814100-2c34a269-9a1c-482b-9f02-2d11db882d82.png)
+
+A continuación nos vamos al editor, creamos una nueva carpeta en <b>Views</b> donde crearemos una nueva plantilla de blade:
+
+![image](https://user-images.githubusercontent.com/103035621/193816164-7477d034-d849-4611-ab90-445b8d1d7a13.png)
+
+Vamos al controlador, y en el método index (podría llamarse de otra forma sin problema), utilizando los métodos de base de datos obtenemos todos los campos de la tabla cliente y los almacenamos en una variable, dicha variable se la enviamos mediante <b>return view</b> a la vista para luego su posterior tratamiento:
+
+![image](https://user-images.githubusercontent.com/103035621/193816694-1f85f21f-ec1e-4dde-b686-a31bd7938319.png)
+
+A continuación editamos el fichero web.php encargado del sistema de rutas, crearemos una nueva ruta (endpoint), definiremos el método utilizado, el controlador indicado y la función a realizar:
+
+![image](https://user-images.githubusercontent.com/103035621/193817233-d431b59a-dedd-4fac-88ad-39b122701e09.png)
+
+Vamos a la view de blade que hemos creado con anterioridad, insertamos un bucle foreach, recorremos el objeto enviado mediante el controlador a la vista y mostramos los datos recopilados dentro del bucle:
+
+![image](https://user-images.githubusercontent.com/103035621/193817487-f56aec60-5061-4227-a8c3-c4276f579ba9.png)
+![image](https://user-images.githubusercontent.com/103035621/193817642-490d951b-43ed-451e-b55e-c689d7666ed6.png)
+
+Blade permite también añadir fragmento html y css:
+
+![image](https://user-images.githubusercontent.com/103035621/193818789-0ebb8597-028f-495a-9b39-d7145243f9f9.png)
+![image](https://user-images.githubusercontent.com/103035621/193818830-ff52ef08-6f08-44fb-b2b0-e41a80b5ac1d.png)
+
+
+
