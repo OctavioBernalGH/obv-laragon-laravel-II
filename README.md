@@ -1,63 +1,66 @@
-# obv-laragon-laravel-II
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Requisitos previos para crear un proyecto en Laravel:
-<ul>
-  <li>PHP</li>
-  <li>Mysql</li>
-  <li>Composer</li>
-  <li>Node</li>
-</ul>
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-Vamos a proceder a crear un nuevo proyecto en Laravel utilizando la última versión, para ello utilizaremos Laragon como localserver y composer para instalar las dependencias y crear la estructura de proyecto. Creamos un nuevo proyecto mediante el comando <b>composer create-project laravel/laravel nombre-proyecto</b>.
+## About Laravel
 
-![image](https://user-images.githubusercontent.com/103035621/193810171-b2b096de-eb5e-47b8-8e8a-c431bf6efba4.png)
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-Para proseguir se ha de modificar el fichero <b>.env</b> y adaptarlo a la BBDD que disponemos, en el caso que estoy haciendo utilizo la BBDD local de Laragon:
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-![image](https://user-images.githubusercontent.com/103035621/193810980-74ae2e25-b477-4c5b-9693-01126de2089d.png)
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-A continuación aprovechando los snipets que proporciona artisan, crearemos toda la estructura base MVC, para ello utilizamos el comando <b>php artisan make:model NombreModelo -crm</b>, dicho comando creará el modelo de datos, el fichero migrations (este fichero permite definir la estructura de la BBDD, esta estructura se creará mediante <i>php artisan migrate</i> cogiéndo como estructura el fichero migrations), y el controlador:
+## Learning Laravel
 
-![image](https://user-images.githubusercontent.com/103035621/193811620-7e7f21cf-6c8d-42d2-aedc-61450f6437fa.png)
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-Añadimos los campos deseados para la tabla en el fichero migrations creado en el anterior paso, de esta forma definimos la estructura que creará el programa:
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-![image](https://user-images.githubusercontent.com/103035621/193812419-5b555743-e76e-4a9d-96ed-2af4efd2a944.png)
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-Una vez definido aplicamos los cambios en la BBDD, para ello utilizamos el comando <b>php artisan migrate</b>.
+## Laravel Sponsors
 
-![image](https://user-images.githubusercontent.com/103035621/193812732-6aa00de4-34e0-43a9-af1b-4687d2c1fe30.png)
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-Se puede observar mediante el gestor de BBDD heidi incluido en laragon que se ha creado la estructura de tabla definida en migrations:
+### Premium Partners
 
-![image](https://user-images.githubusercontent.com/103035621/193813021-2cf125de-3939-4572-8353-f44c0307b3ba.png)
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[OP.GG](https://op.gg)**
+- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+- **[Lendio](https://lendio.com)**
 
-Insertaremos datos en la BBDD de forma manual para comenzar a tratarlos en la aplicación, para ellos vamos al gestor y creamos las diferentes sentencias:
+## Contributing
 
-![image](https://user-images.githubusercontent.com/103035621/193814038-3c096c1a-5b70-4b86-b405-c241185789dd.png)
-![image](https://user-images.githubusercontent.com/103035621/193814100-2c34a269-9a1c-482b-9f02-2d11db882d82.png)
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-A continuación nos vamos al editor, creamos una nueva carpeta en <b>Views</b> donde crearemos una nueva plantilla de blade:
+## Code of Conduct
 
-![image](https://user-images.githubusercontent.com/103035621/193816164-7477d034-d849-4611-ab90-445b8d1d7a13.png)
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-Vamos al controlador, y en el método index (podría llamarse de otra forma sin problema), utilizando los métodos de base de datos obtenemos todos los campos de la tabla cliente y los almacenamos en una variable, dicha variable se la enviamos mediante <b>return view</b> a la vista para luego su posterior tratamiento:
+## Security Vulnerabilities
 
-![image](https://user-images.githubusercontent.com/103035621/193816694-1f85f21f-ec1e-4dde-b686-a31bd7938319.png)
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-A continuación editamos el fichero web.php encargado del sistema de rutas, crearemos una nueva ruta (endpoint), definiremos el método utilizado, el controlador indicado y la función a realizar:
+## License
 
-![image](https://user-images.githubusercontent.com/103035621/193817233-d431b59a-dedd-4fac-88ad-39b122701e09.png)
-
-Vamos a la view de blade que hemos creado con anterioridad, insertamos un bucle foreach, recorremos el objeto enviado mediante el controlador a la vista y mostramos los datos recopilados dentro del bucle:
-
-![image](https://user-images.githubusercontent.com/103035621/193817487-f56aec60-5061-4227-a8c3-c4276f579ba9.png)
-![image](https://user-images.githubusercontent.com/103035621/193817642-490d951b-43ed-451e-b55e-c689d7666ed6.png)
-
-Blade permite también añadir fragmento html y css:
-
-![image](https://user-images.githubusercontent.com/103035621/193818789-0ebb8597-028f-495a-9b39-d7145243f9f9.png)
-![image](https://user-images.githubusercontent.com/103035621/193818830-ff52ef08-6f08-44fb-b2b0-e41a80b5ac1d.png)
-
-
-
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
