@@ -58,3 +58,42 @@ Blade permite también añadir fragmento html y css:
 
 ![image](https://user-images.githubusercontent.com/103035621/193818789-0ebb8597-028f-495a-9b39-d7145243f9f9.png)
 ![image](https://user-images.githubusercontent.com/103035621/193818830-ff52ef08-6f08-44fb-b2b0-e41a80b5ac1d.png)
+
+A continuación se procederá a crear un sistema de entrada de datos mediante formulario, para ello creamos una vista en <b>resources->views</b>, y creamos un formulario básico.
+
+![image](https://user-images.githubusercontent.com/103035621/194033897-83d69ca4-fe6e-43de-a3e2-66e3015f46eb.png)
+
+A continuación vamos al controlador y creamos el método para enviar los datos del formulario a la base de datos:
+
+![image](https://user-images.githubusercontent.com/103035621/194034160-43c1ceb3-f854-467f-981b-0a35c6254a85.png)
+
+Vamos al sistema de enrutamiento albergado en web.php y añadimos la ruta del controlador/método:
+
+![image](https://user-images.githubusercontent.com/103035621/194034523-04399ab8-26d8-4b1a-a5f1-af34eee7dbed.png)
+
+A continuación rellenaremos el formulario para la obtención de datos utilizando el alias como ruta para enviar los datos:
+
+![image](https://user-images.githubusercontent.com/103035621/194034768-ac566c15-5882-48d2-9ce4-49ca34faaec4.png)
+
+Instalaremos tailwindcss para dar estilos, para ello en la consola introduciremos el comando <b>npm install -D tailwindcss</b> y seguido de este <b>npx tailwindcss init</b>:
+
+![image](https://user-images.githubusercontent.com/103035621/194035017-1f27cebf-7097-4751-863d-343a4c74f0ca.png)
+
+Añadimos <b>content: ["./src/**/*.{html,js}"]</b> en el fichero de configuración de tailwind ubicado en la raíz del proyecto y <b>@tailwind base;
+@tailwind components; @tailwind utilities;</b> en el fichero app.css ubicado en resources,css.
+
+Añadiremos el plugin oficial para alñadir los "forms" de tailwindcss, para ello ejecutaremos el comando <b>npm install -D @tailwindcss/forms</b> en un powershell en la raíz del proyecto y añadiremos <b>require('@tailwindcss/forms'),</b> en el fichero de configuración de tailwindcss ubicado en la raíz del proyecto.
+
+El siguiente paso es dar estilos para ello le damos al documento una estructura de html, en la cabecera de este añadimos el acceso a vite y en las clases de los diferentes objetos de la vista les añadimos los parámetros de tailwindcss:
+
+![image](https://user-images.githubusercontent.com/103035621/194036406-1a0d4390-d8d8-4706-bb90-b6a977a24b29.png)
+
+*Muy importante añadir las anotaciones, la primera da acceso vite al documento y la segunda anotación añade un token a la peticion HTTP.
+
+Para actualiza la vista hace falta utilizar el comando <b>npm run dev</b>.
+
+Aplicando los estilos mostrados queda de la siguiente forma:
+
+![image](https://user-images.githubusercontent.com/103035621/194036649-488df097-15eb-4219-a278-1f26b2a62026.png)
+
+
